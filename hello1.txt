@@ -1,1 +1,4 @@
 hello git is a free sortware.
+ git config --global user.name "Your Name"
+Git is a distributed version control system.
+Git is free software.
