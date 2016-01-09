@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Bootstrap tabs选项卡实现运用</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $("#tabs1 a").click(function (e) {
+                $(this).tab('show');
+            });
+            $("#tabs2 a").click(function (e) {
+                $(this).tab('show');
+            });
+            $("#tabs3 a").click(function (e) {
+                $(this).tab('show');
+            });
+            $("#tabs4 a").click(function (e) {
+                $(this).tab('show');
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="span12">
+            <h1>Bootstrap tabs选项卡实现</h1>
+        </div>
+        <div class="span12">
+            <h3 class="text-error">效果一</h3>
+        </div>
+        <div class="span12">
+            <ul class="nav-tabs nav" id="tabs1">
+                <li class="active"><a href="#tabs-1">tabs-1</a></li>
+                <li><a href="#tabs-2">tabs-2</a></li>
+                <li><a href="#tabs-3">tabs-3</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="tabs-1">
+                    <p>不知出于什么原因，Google Play商店日前下架了备受欢迎的Nexus 7灰色保护套，而粉红色保护套则只面向非美国地区出售。对于美国用户来说，现在能买的Nexus 7保护套只有淡蓝色一种。 谷歌并未说明灰色保护套是否会永久告别美国用户，不过在华硕的官网上，仍可以选购Nexus 7保护套的六种配色，包括黑、绿、粉红、灰、橙、淡蓝。此外，在其它第三方网络零售商处，也可以照常购买。</p>
+                </div>
+                <div class="tab-pane" id="tabs-2">
+                    <ul>
+                        <li><a href="#">从WordPress看开源平台的发展</a></li>
+                        <li><a href="#">jQuery 2.0 beta发布，不再支持IE6/7/8，jQuery 1.8、1.9与2.0特性概览</a></li>
+                        <li><a href="#">一个简洁时尚的PSD登陆表单素材</a></li>
+                    </ul>
+                </div>
+                <div class="tab-pane" id="tabs-3">
+                    <p>今天是联合国妇女权益和国际和平日，又称“三八妇女节”。谷歌公司决定在这个特殊的日子为女性带来不一样的一天。据悉，谷歌公司专门为此举办了为期24小时的直播演讲活动--Voices Global Conference。该大会由全球科技女性（Global Tech Women）主办。</p>
+                </div>
+            </div>
+        </div>
+        <div class="span12">
+            <h3 class="text-error">效果二</h3>
+        </div>
+        <div class="span12">
+            <div class="tabbable tabs-below">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tabs-4">
+                        <p>不知出于什么原因，Google Play商店日前下架了备受欢迎的Nexus 7灰色保护套，而粉红色保护套则只面向非美国地区出售。对于美国用户来说，现在能买的Nexus 7保护套只有淡蓝色一种。 谷歌并未说明灰色保护套是否会永久告别美国用户，不过在华硕的官网上，仍可以选购Nexus 7保护套的六种配色，包括黑、绿、粉红、灰、橙、淡蓝。此外，在其它第三方网络零售商处，也可以照常购买。</p>
+                    </div>
+                    <div class="tab-pane" id="tabs-5">
+                        <ul>
+                            <li><a href="#">从WordPress看开源平台的发展</a></li>
+                            <li><a href="#">jQuery 2.0 beta发布，不再支持IE6/7/8，jQuery 1.8、1.9与2.0特性概览</a></li>
+                            <li><a href="#">一个简洁时尚的PSD登陆表单素材</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" id="tabs-6">
+                        <p>今天是联合国妇女权益和国际和平日，又称“三八妇女节”。谷歌公司决定在这个特殊的日子为女性带来不一样的一天。据悉，谷歌公司专门为此举办了为期24小时的直播演讲活动--Voices Global Conference。该大会由全球科技女性（Global Tech Women）主办。</p>
+                    </div>
+                </div>
+                <ul class="nav-tabs nav" id="tabs2">
+                    <li class="active"><a href="#tabs-4">tabs-4</a></li>
+                    <li><a href="#tabs-5">tabs-5</a></li>
+                    <li><a href="#tabs-6">tabs-6</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="span12">
+            <h3 class="text-error">效果三</h3>
+        </div>
+        <div class="span12">
+            <div class="tabbable tabs-left">
+                <ul class="nav-tabs nav" id="tabs3">
+                    <li class="active"><a href="#tabs-7">tabs-7</a></li>
+                    <li><a href="#tabs-8">tabs-8</a></li>
+                    <li><a href="#tabs-9">tabs-9</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tabs-7">
+                        <p>不知出于什么原因，Google Play商店日前下架了备受欢迎的Nexus 7灰色保护套，而粉红色保护套则只面向非美国地区出售。对于美国用户来说，现在能买的Nexus 7保护套只有淡蓝色一种。 谷歌并未说明灰色保护套是否会永久告别美国用户，不过在华硕的官网上，仍可以选购Nexus 7保护套的六种配色，包括黑、绿、粉红、灰、橙、淡蓝。此外，在其它第三方网络零售商处，也可以照常购买。</p>
+                    </div>
+                    <div class="tab-pane" id="tabs-8">
+                        <p>在惠普赞助的年度黑客挑战赛Pwn2Own上，Chrome、Firefox和IE 10浏览器，Java和Win 8相继沦陷。其中，法国安全公司Vupen Security的 研究人员组合利用多种攻击技术（包括两个IE10 0day漏洞），绕过了微软的多重安全防线，入侵了运行在Surface Pro（Win8）平板上的IE10浏览器，从而赢得了10万美元奖金。</p>
+                    </div>
+                    <div class="tab-pane" id="tabs-9">
+                        <ul>
+                            <li><a href="#">从WordPress看开源平台的发展</a></li>
+                            <li><a href="#">jQuery 2.0 beta发布，不再支持IE6/7/8，jQuery 1.8、1.9与2.0特性概览</a></li>
+                            <li><a href="#">一个简洁时尚的PSD登陆表单素材</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="span12">
+            <h3 class="text-error">效果四</h3>
+        </div>
+        <div class="span12">
+            <div class="tabbable tabs-right">
+                <ul class="nav-tabs nav" id="tabs4">
+                    <li class="active"><a href="#tabs-10">tabs-10</a></li>
+                    <li><a href="#tabs-11">tabs-11</a></li>
+                    <li><a href="#tabs-12">tabs-12</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tabs-10">
+                        <p>不知出于什么原因，Google Play商店日前下架了备受欢迎的Nexus 7灰色保护套，而粉红色保护套则只面向非美国地区出售。对于美国用户来说，现在能买的Nexus 7保护套只有淡蓝色一种。 谷歌并未说明灰色保护套是否会永久告别美国用户，不过在华硕的官网上，仍可以选购Nexus 7保护套的六种配色，包括黑、绿、粉红、灰、橙、淡蓝。此外，在其它第三方网络零售商处，也可以照常购买。</p>
+                    </div>
+                    <div class="tab-pane" id="tabs-11">
+                        <p>在惠普赞助的年度黑客挑战赛Pwn2Own上，Chrome、Firefox和IE 10浏览器，Java和Win 8相继沦陷。其中，法国安全公司Vupen Security的 研究人员组合利用多种攻击技术（包括两个IE10 0day漏洞），绕过了微软的多重安全防线，入侵了运行在Surface Pro（Win8）平板上的IE10浏览器，从而赢得了10万美元奖金。</p>
+                    </div>
+                    <div class="tab-pane" id="tabs-12">
+                        <ul>
+                            <li><a href="#">从WordPress看开源平台的发展</a></li>
+                            <li><a href="#">jQuery 2.0 beta发布，不再支持IE6/7/8，jQuery 1.8、1.9与2.0特性概览</a></li>
+                            <li><a href="#">一个简洁时尚的PSD登陆表单素材</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="span12">
+            <p><a href="#" class="btn btn-success">返回Bootstrap tabs选项卡实现教程页</a></p>
+            <p><a class="btn-warning btn" href="http://www.58img.com/" target="_blank">返回WEB前端资源网</a></p>
+            <h3 class="text-error">注明：Bootstrap2.0不支持IE6，支持IE7以上版本！</h3>
+            <h3 class="text-error">注明：Bootstrap3.0将不在支持IE6、IE7，支持IE8以上版本！</h3>
+        </div>
+    </div>
+</div>
+</body>
+</html>

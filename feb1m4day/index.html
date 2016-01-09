@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/index.css"/>
+    <script src="js/angular.js"></script>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li id="ul1">星期一</li>
+            <li>星期二</li>
+            <li>星期三</li>
+            <li>星期四</li>
+            <li>星期五</li>
+        </ul>
+    </nav>
+</header>
+<div>
+    <textarea rows="15" cols="5">
+            111111111111111111111
+    </textarea>
+</div>
+<a target="_blank"></a>
+<div  ng-app="myApp">
+    <div ng-controller="MyController">
+        <h1>hello {{clock}}</h1>
+        <h1>hello {{name}}</h1>
+    </div>
+    <h1>hello {{name}}</h1>
+
+    <div ng-controller="firstController">
+        <h4>the simple addding machine ever</h4>
+            <button ng-click="add(1)" class="button">Add</button>
+            <a ng-click="subtract(1)" class="button alert"> Substract</a>
+        <h4> Current count:  {{counter}}</h4>
+    </div>
+
+    <div ng-controller="parentController">
+        <div ng-controller="ChildController">
+            <button ng-click="sayHello()">Say Hello</button>
+        </div>
+        {{person}}
+    </div>
+    <!--filter过滤器的使用-->
+    {{[{
+        'name' : 'zhb',
+        "city" : 'cd',
+        'food' : "rice"
+    },{
+    'name' : "wll",
+    "city" : "yibin",
+    "food" : "milk"
+     }] | filter : {'name': "wll"}
+    }}
+
+    <div ng-show="showLoginFrom">
+        <from ng-submit="runLogin()"></from>
+    </div>
+    <div ng-show="!showLoginFrom">
+        <from ng-submit="runRegister()"></from>
+    </div>
+
+</div>
+<script src="js/APP1.js"></script>
+</body>
+</html>

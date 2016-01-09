@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="hello" id="divObj" style="width: 200px; height: 30px;border: 1px solid red;"><input id="fri" type="radio"/><span>今天星期五</span>
+</div>
+<div id="yanzheng" style="color: red;font-size: 20px;background: grey"></div>
+<button id="btn" >dainji</button>
+<script>
+//    var divObj = document.getElementById('divObj');
+////    alert(divObj.firstChild.setAttribute('checked', 'checked'))
+//    var fri = document.getElementById('fri');
+//    divObj.onclick = function() {
+//        divObj.firstChild.nextSibling.setAttribute('title', 'checked');
+//    }
+//
+//           var num1 = 1,
+//                num2 = 2;
+//    var max = (num1 > num2) ? 'zhengbia0' : 'wulkinglin';
+//    alert(max);
+//    function add(num, num3) {
+//      sum = num + num3;
+//        return sum;
+//    }
+//    var hello = add(10, 20);
+//    alert(sum)
+//    alert(hello)
+//    var arr = [1,2,5,3,6,8,4,7]
+//    function compare(v1 ,v2) {
+//        return v2 - v1;
+////        倒序
+//    }
+//    alert(arr.sort(compare));
+//    var msg = 'hello world';
+//    eval('alert(msg)');
+
+var yanzheng = document.getElementById('yanzheng');
+var btn = document.getElementById('btn');
+btn.onclick =fun
+     function fun() {
+         var arr = ['a','b','c','d','e',1,2,3,4,5,6,7,8,9,0,'A','B','C','D','E','F','G'];
+         var num = Math.floor(Math.random()*20 + 0);
+         var num1 = Math.floor(Math.random()*20 + 0);
+         var num2 = Math.floor(Math.random()*20 + 0);
+         var num3 = Math.floor(Math.random()*20 + 0);
+         yanzheng.innerHTML =''+ arr[num] +arr[num1] + arr[num2] + arr[num3];
+    }
+</script>
+</body>
+</html>
