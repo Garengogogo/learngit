@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link href="css/bootStarp/bootstrap.css" rel="stylesheet"/>
+    <link href="css/index.css" rel="stylesheet"/>
+    <link href="css/lunbo.css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/jquery/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="js/lastTime/jquery.min.js"></script>
+    <script type="text/javascript" src="js/lastTime/jquery.flipcountdown.js"></script>
+    <script type="text/javascript" src="js/lastTime/lasttime.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery.flipcountdown.css" />
+</head>
+<body>
+<header>
+    <div class="head">
+        <ul class="head_ul_1">
+            <li><a href="index.html">天猫首页</a></li>
+            <li><a href="#">嗨，欢迎到天猫</a></li>
+            <li><a href="logo.html"  id="welcomeUser" onclick="clicks()">请登录</a></li>
+            <li><a href="register.html">免费注册</a></li>
+        </ul>
+        <ul class="head_ul_2">
+           <li id="second_m">
+               <a href="#">我的淘宝</a>
+                <div id="second_menu">
+                    <p><a href="#">我的宝贝</a></p>
+                    <p><a href="#">已处理订单</a></p>
+                    <p><a href="#">未处理订单</a></p>
+                </div>
+           </li>
+            <li class="car_shop">
+                <a href="#">购物车</a>
+                <span>0件</span>
+            </li>
+            <li><a href="#">收藏夹</a></li>
+            <li><a href="#">手机版</a></li>
+            <li><a href="contantUs.html">关于我们</a></li>
+            <li><a href="#">商家支持</a></li>
+            <li class="web_nav" id="web_nav"> <b class="web_nav_1"></b><span>网站导航</span><i id="i_monve"></i></li>
+        </ul>
+    </div>
+</header>
+<!--搜索框-->
+<div class="container allColor">
+    <div class="row">
+        <div class="col-lg-2">
+            <img src="images/logo.png"/>
+        </div>
+        <div class="col-lg-8">
+            <input type="text "  class="form-control logo_input" placeholder="11.11全球狂欢"/>
+        </div>
+        <div class="col-lg-2">
+            <button class="btn btn-danger btn-block logo_input">搜索</button>
+        </div>
+    </div>
+    <!--主要内容-->
+    <div class="row cont_1">
+        <div class="col-lg-4">
+            <ul  class="nav">
+                <li>首页</li>
+                <li>隐形眼镜</li>
+                <li>医疗服务</li>
+                <li>药师咨询</li>
+            </ul>
+        </div>
+        <div class="col-lg-6"></div>
+        <div class="col-lg-2">
+            <div class="show_time" id="show_time"></div>
+            <div class="work_time" id="work_time"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 left_1">
+            <div class="menu_right" id="menu_right">
+                <h3>家庭常备 <span> > </span></h3>
+                <ul class="ul_1">
+                    <li><a href="#">双11会场</a> </li><li><a href="#">皮肤过敏</a> </li>
+                    <li><a href="#">计生避孕</a> </li><li><a href="#">补肾用药</a> </li>
+                    <li><a href="#">养胃护胃</a> </li><li><a href="#">腰腿疼痛</a> </li>
+                    <li><a href="#">男科用药</a> </li><li><a href="#">妇科用药</a> </li>
+                    <li><a href="#">儿科用药</a> </li>
+                </ul>
+            </div>
+            <!--<div class="cover"></div>-->
+            <!--遮挡层-->
+            <div class="menu_1" id="menu_1">
+                <dl class="menu_1_1 fl">
+                    <dt><a>减肥瘦身</a></dt>
+                        <dd>
+                            <a href="#">酵素</a><a href="#">减肥茶</a><a href="#">奥利司他</a>
+                            <a href="#">奶昔</a><a href="#">代餐粉</a><a href="#">左旋肉碱</a>
+                            <a href="#">荷叶</a><a href="#">苦丁茶</a><a href="#">佛手花</a>
+                            <a href="#">牛蒡茶</a><a href="#">番泻叶</a><a href="#">松花粉</a>
+                            <a href="#">白扁豆</a><a href="#">冬瓜皮</a><a href="#">鸡屎藤</a>
+                        </dd>
+                </dl>
+
+                <dl class="menu_1_1 fr">
+                    <dt><a>减肥瘦身</a></dt>
+                    <dd>
+                        <a href="#">酵素</a><a href="#">减肥茶</a><a href="#">奥利司他</a>
+                        <a href="#">奶昔</a><a href="#">代餐粉</a><a href="#">左旋肉碱</a>
+                        <a href="#">荷叶</a><a href="#">苦丁茶</a><a href="#">佛手花</a>
+                        <a href="#">牛蒡茶</a><a href="#">番泻叶</a><a href="#">松花粉</a>
+                        <a href="#">白扁豆</a><a href="#">冬瓜皮</a><a href="#">鸡屎藤</a>
+                    </dd>
+                </dl>
+
+                <dl class="menu_1_1 fl">
+                    <dt><a>减肥瘦身</a></dt>
+                    <dd>
+                        <a href="#">酵素</a><a href="#">减肥茶</a><a href="#">奥利司他</a>
+                        <a href="#">奶昔</a><a href="#">代餐粉</a><a href="#">左旋肉碱</a>
+                        <a href="#">荷叶</a><a href="#">苦丁茶</a><a href="#">佛手花</a>
+                        <a href="#">牛蒡茶</a><a href="#">番泻叶</a><a href="#">松花粉</a>
+                        <a href="#">白扁豆</a><a href="#">冬瓜皮</a><a href="#">鸡屎藤</a>
+                    </dd>
+                </dl>
+                <dl class="menu_1_1 fr">
+                    <dt><a>减肥瘦身</a></dt>
+                    <dd>
+                        <a href="#">酵素</a><a href="#">减肥茶</a><a href="#">奥利司他</a>
+                        <a href="#">奶昔</a><a href="#">代餐粉</a><a href="#">左旋肉碱</a>
+                        <a href="#">荷叶</a><a href="#">苦丁茶</a><a href="#">佛手花</a>
+                        <a href="#">牛蒡茶</a><a href="#">番泻叶</a><a href="#">松花粉</a>
+                        <a href="#">白扁豆</a><a href="#">冬瓜皮</a><a href="#">鸡屎藤</a>
+                    </dd>
+                </dl>
+            </div>
+<!--/////////////////////////////////////////////////////////////////////////////-->
+            <div class="menu_right" id="menu_middle">
+                <h3>中西药品  <span> > </span></h3>
+                <ul class="ul_1">
+                    <li><a href="#">肠胃用药</a> </li><li><a href="#">解热镇痛</a> </li>
+                    <li><a href="#">心脑血管</a> </li><li><a href="#">皮肤用药</a> </li>
+                    <li><a href="#">肝胆用药</a> </li><li><a href="#">避孕药品</a> </li>
+                    <li><a href="#">生发脱发</a> </li><li><a href="#">五官用药</a> </li>
+                    <li><a href="#">补肾用药</a> </li>
+                </ul>
+            </div>
+            <div class="menu_2" id="menu_2">
+                <dl class="menu_1_1 fl">
+                    <dt><a>减肥瘦身</a></dt>
+                    <dd>
+                        <a href="#">酵素</a><a href="#">减肥茶</a><a href="#">奥利司他</a>
+                        <a href="#">奶昔</a><a href="#">代餐粉</a><a href="#">左旋肉碱</a>
+                        <a href="#">荷叶</a><a href="#">苦丁茶</a><a href="#">佛手花</a>
+                        <a href="#">牛蒡茶</a><a href="#">番泻叶</a><a href="#">松花粉</a>
+                        <a href="#">白扁豆</a><a href="#">冬瓜皮</a><a href="#">鸡屎藤</a>
+                    </dd>
+                </dl>
+
+                <dl class="menu_1_1 fr">
+                    <dt><a>减肥瘦身</a></dt>
+                    <dd>
+                        <a href="#">酵素</a><a href="#">减肥茶</a><a href="#">奥利司他</a>
+                        <a href="#">奶昔</a><a href="#">代餐粉</a><a href="#">左旋肉碱</a>
+                        <a href="#">荷叶</a><a href="#">苦丁茶</a><a href="#">佛手花</a>
+                        <a href="#">牛蒡茶</a><a href="#">番泻叶</a><a href="#">松花粉</a>
+                        <a href="#">白扁豆</a><a href="#">冬瓜皮</a><a href="#">鸡屎藤</a>
+                    </dd>
+                </dl>
+
+                <dl class="menu_1_1 fl">
+                    <dt><a>减肥瘦身</a></dt>
+                    <dd>
+                        <a href="#">酵素</a><a href="#">减肥茶</a><a href="#">奥利司他</a>
+                        <a href="#">奶昔</a><a href="#">代餐粉</a><a href="#">左旋肉碱</a>
+                        <a href="#">荷叶</a><a href="#">苦丁茶</a><a href="#">佛手花</a>
+                        <a href="#">牛蒡茶</a><a href="#">番泻叶</a><a href="#">松花粉</a>
+                        <a href="#">白扁豆</a><a href="#">冬瓜皮</a><a href="#">鸡屎藤</a>
+                    </dd>
+                </dl>
+                <dl class="menu_1_1 fr">
+                    <dt><a>减肥瘦身</a></dt>
+                    <dd>
+                        <a href="#">酵素</a><a href="#">减肥茶</a><a href="#">奥利司他</a>
+                        <a href="#">奶昔</a><a href="#">代餐粉</a><a href="#">左旋肉碱</a>
+                        <a href="#">荷叶</a><a href="#">苦丁茶</a><a href="#">佛手花</a>
+                        <a href="#">牛蒡茶</a><a href="#">番泻叶</a><a href="#">松花粉</a>
+                        <a href="#">白扁豆</a><a href="#">冬瓜皮</a><a href="#">鸡屎藤</a>
+                    </dd>
+                </dl>
+            </div>
+<!--////////////////////////////////////////////////////////////////////-->
+            <div class="menu_right" id="menu_last">
+                <h3>健康保健  <span> > </span></h3>
+                <ul class="ul_1">
+                    <li><a href="#">阿胶补血</a> </li><li><a href="#">补肾强身</a> </li>
+                    <li><a href="#">增强免疫</a> </li><li><a href="#">补维生素</a> </li>
+                    <li><a href="#">调节血脂</a> </li><li><a href="#">减肥瘦身</a> </li>
+                    <li><a href="#">缓解疲劳</a> </li><li><a href="#">纤体排毒</a> </li>
+                    <li><a href="#">滋补养生</a> </li>
+                </ul>
+            </div>
+            <div class="menu_3" id="menu_3">
+                <dl class="menu_1_1 fl">
+                    <dt><a>减肥瘦身</a></dt>
+                    <dd>
+                        <a href="#">酵素</a><a href="#">减肥茶</a><a href="#">奥利司他</a>
+                        <a href="#">奶昔</a><a href="#">代餐粉</a><a href="#">左旋肉碱</a>
+                        <a href="#">荷叶</a><a href="#">苦丁茶</a><a href="#">佛手花</a>
+                        <a href="#">牛蒡茶</a><a href="#">番泻叶</a><a href="#">松花粉</a>
+                        <a href="#">白扁豆</a><a href="#">冬瓜皮</a><a href="#">鸡屎藤</a>
+                    </dd>
+                </dl>
+
+                <dl class="menu_1_1 fr">
+                    <dt><a>减肥瘦身</a></dt>
+                    <dd>
+                        <a href="#">酵素</a><a href="#">减肥茶</a><a href="#">奥利司他</a>
+                        <a href="#">奶昔</a><a href="#">代餐粉</a><a href="#">左旋肉碱</a>
+                        <a href="#">荷叶</a><a href="#">苦丁茶</a><a href="#">佛手花</a>
+                        <a href="#">牛蒡茶</a><a href="#">番泻叶</a><a href="#">松花粉</a>
+                        <a href="#">白扁豆</a><a href="#">冬瓜皮</a><a href="#">鸡屎藤</a>
+                    </dd>
+                </dl>
+
+                <dl class="menu_1_1 fl">
+                    <dt><a>减肥瘦身</a></dt>
+                    <dd>
+                        <a href="#">酵素</a><a href="#">减肥茶</a><a href="#">奥利司他</a>
+                        <a href="#">奶昔</a><a href="#">代餐粉</a><a href="#">左旋肉碱</a>
+                        <a href="#">荷叶</a><a href="#">苦丁茶</a><a href="#">佛手花</a>
+                        <a href="#">牛蒡茶</a><a href="#">番泻叶</a><a href="#">松花粉</a>
+                        <a href="#">白扁豆</a><a href="#">冬瓜皮</a><a href="#">鸡屎藤</a>
+                    </dd>
+                </dl>
+                <dl class="menu_1_1 fr">
+                    <dt><a>减肥瘦身</a></dt>
+                    <dd>
+                        <a href="#">酵素</a><a href="#">减肥茶</a><a href="#">奥利司他</a>
+                        <a href="#">奶昔</a><a href="#">代餐粉</a><a href="#">左旋肉碱</a>
+                        <a href="#">荷叶</a><a href="#">苦丁茶</a><a href="#">佛手花</a>
+                        <a href="#">牛蒡茶</a><a href="#">番泻叶</a><a href="#">松花粉</a>
+                        <a href="#">白扁豆</a><a href="#">冬瓜皮</a><a href="#">鸡屎藤</a>
+                    </dd>
+                </dl>
+            </div>
+            <!--///////////////////////////-->
+            </div>
+
+        <!--轮播-->
+        <div class="col-lg-7 play_auto">
+            <div id="images">
+                <a><img class="back" src="images/back.png" /></a>
+                <a><img class="forward" src="images/forward.png" /></a>
+                <ul id="ul1" class="ul1" >
+                    <li class="li-index">1</li>
+                    <li class="li-index">2</li>
+                    <li class="li-index">3</li>
+                    <li class="li-index">4</li>
+                    <li class="li-index">5</li>
+                    <li class="li-index">6</li>
+                </ul>
+            </div>
+            <div class="time">
+                <div>当前时间</div>
+                <div id="retroclockbox_lg"></div>
+                <!--<div><strong>md</strong>-middle, default</div>-->
+                <!--<div id="retroclockbox_md"></div>-->
+                <!--<div><strong>sm</strong>-small</div>-->
+                <!--<div id="retroclockbox_sm"></div>-->
+                <!--<div><strong>xs</strong>-Extra small</div>-->
+                <!--<div id="retroclockbox_xs"></div>-->
+            </div>
+        </div>
+
+        <div class="col-lg-2">
+            <ul class="ul_right">
+                <li><img src="images/ri1.jpg"/></li>
+                <li><img src="images/ri3.jpg"/></li>
+            </ul>
+        </div>
+    </div>
+    <!--品牌1-->
+    <div class="row">
+        <h2>品牌馆</h2>
+        <div class="pro_1">
+            <div >
+                <img class="fl" src="images/001.png"/>
+                <img class="fl" src="images/002.png"/>
+            </div>
+        </div>
+    </div>
+    <!--品牌2-->
+    <div class="row">
+        <h2>健康热点</h2>
+        <div class=" fl pro_2">
+            <div class="fl">
+                <img src="images/1601.jpg"/>
+            </div>
+            <div class="fl">
+                <div class="hosptal_1">
+                    <p class="descText">盘龙云海 排毒养颜胶囊90粒 祛痘祛斑通便 治疗便秘</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>69</strong>
+                        <span class="origin">/<del>&yen;196.6</del></span>
+                    </p>
+                    <img src="images/1602.jpg"/>
+                </div>
+            </div>
+            <div class="fl">
+                <div class="hosptal_1">
+                    <p class="descText">子弹飞六味地黄丸浓缩丸1000丸滋阴补肾肾虚肾亏六味地地黄丸包邮</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>88</strong>
+                        <span class="origin">/<del>&yen;208</del></span>
+                    </p>
+                    <img src="images/ri1.jpg"/>
+                </div>
+            </div>
+            <div class="fl">
+                <div class="hosptal_1">
+                    <p class="descText">【双II秒杀】中华老字号百花牌天然蜂蜜3瓶 纯净农家自产野生土蜜</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>49.8</strong>
+                        <span class="origin">/<del>&yen;159</del></span>
+                    </p>
+                    <img src="images/ri3.jpg"/>
+                </div>
+            </div>
+
+
+            <div class="fl">
+                <div class="hosptal_1">
+                    <p class="descText">【双II秒杀】中华老字号百花牌天然蜂蜜3瓶 纯净农家自产野生土蜜</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>49.8</strong>
+                        <span class="origin">/<del>&yen;159</del></span>
+                    </p>
+                    <img src="images/ri4.jpg"/>
+                </div>
+            </div>
+
+            <div class="fl">
+                <div class="hosptal_1">
+                    <p class="descText">【双II秒杀】中华老字号百花牌天然蜂蜜3瓶 纯净农家自产野生土蜜</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>49.8</strong>
+                        <span class="origin">/<del>&yen;159</del></span>
+                    </p>
+                    <img src="images/ri5.jpg"/>
+                </div>
+            </div>
+
+            <div class="fl">
+                <div class="hosptal_1">
+                    <p class="descText">【双II秒杀】中华老字号百花牌天然蜂蜜3瓶 纯净农家自产野生土蜜</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>49.8</strong>
+                        <span class="origin">/<del>&yen;159</del></span>
+                    </p>
+                    <img src="images/ri6.jpg"/>
+                </div>
+            </div>
+
+            <div class="fl">
+                <div class="hosptal_1">
+                    <p class="descText">【双II秒杀】中华老字号百花牌天然蜂蜜3瓶 纯净农家自产野生土蜜</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>49.8</strong>
+                        <span class="origin">/<del>&yen;159</del></span>
+                    </p>
+                    <img src="images/ri7.jpg"/>
+                </div>
+            </div>
+
+            <div class="fl">
+                <div class="hosptal_1">
+                    <p class="descText">【双II秒杀】中华老字号百花牌天然蜂蜜3瓶 纯净农家自产野生土蜜</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>49.8</strong>
+                        <span class="origin">/<del>&yen;159</del></span>
+                    </p>
+                    <img src="images/ri8.jpg"/>
+                </div>
+            </div>
+
+            <div class="fl">
+                <div class="hosptal_1">
+                    <p class="descText">【双II秒杀】中华老字号百花牌天然蜂蜜3瓶 纯净农家自产野生土蜜</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>49.8</strong>
+                        <span class="origin">/<del>&yen;159</del></span>
+                    </p>
+                    <img src="images/ri9.jpg"/>
+                </div>
+            </div>
+
+            <div class="fl">
+                <div class="hosptal_1">
+                    <p class="descText">【双II秒杀】中华老字号百花牌天然蜂蜜3瓶 纯净农家自产野生土蜜</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>49.8</strong>
+                        <span class="origin">/<del>&yen;159</del></span>
+                    </p>
+                    <img src="images/ri10.jpg"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--品牌3-->
+    <div class="row">
+        <h2>秋季常见疾病</h2>
+        <div class=" pro_1">
+            <div class=" fl img_1">
+                <img class="fl" src="images/img01/7.jpg"/>
+                <img class="fl" src="images/img01/8.jpg"/>
+                <img class="fl" src="images/img01/3.jpg"/>
+                <img class="fl" src="images/img01/5.jpg"/>
+                <img class="fl" src="images/img01/2.jpg"/>
+                <img class="fl" src="images/img01/4.jpg"/>
+                <img class="fl" src="images/img01/3.png"/>
+            </div>
+            <div class="img_2">
+                <img src="images/img01/1.jpg"/>
+                <img src="images/img01/9.jpg"/>
+            </div>
+        </div>
+    </div>
+    <!--品牌4-->
+    <div class="row">
+        <h2>中西药品</h2>
+        <div class="pro_2 fl">
+            <div class="fl">
+            <img src="images/1120.jpg"/>
+        </div>
+            <div class="fl">
+                <div class="hosptal_1">
+                    <img src="images/1121.jpg"/>
+                    <p class="descText">【双II秒杀】中华老字号百花牌天然蜂蜜3瓶 纯净农家自产野生土蜜</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>49.8</strong>
+                        <span class="origin">/<del>&yen;159</del></span>
+                    </p>
+                </div>
+            </div>
+            <div class="fl">
+                <div class="hosptal_1">
+                    <img src="images/1122.jpg"/>
+                    <p class="descText">【双II秒杀】中华老字号百花牌天然蜂蜜3瓶 纯净农家自产野生土蜜</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>49.8</strong>
+                        <span class="origin">/<del>&yen;159</del></span>
+                    </p>
+                </div>
+            </div>
+            <div class="fl">
+                <div class="hosptal_1">
+                    <img src="images/1123.jpg"/>
+                    <p class="descText">【双II秒杀】中华老字号百花牌天然蜂蜜3瓶 纯净农家自产野生土蜜</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>49.8</strong>
+                        <span class="origin">/<del>&yen;159</del></span>
+                    </p>
+                </div>
+            </div>
+            <div class="fl">
+                <div class="hosptal_1">
+                    <img src="images/1124.jpg"/>
+                    <p class="descText">【双II秒杀】中华老字号百花牌天然蜂蜜3瓶 纯净农家自产野生土蜜</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>49.8</strong>
+                        <span class="origin">/<del>&yen;159</del></span>
+                    </p>
+                </div>
+            </div>
+            <div class="fl">
+                <div class="hosptal_1">
+                    <img src="images/1125.jpg"/>
+                    <p class="descText">【双II秒杀】中华老字号百花牌天然蜂蜜3瓶 纯净农家自产野生土蜜</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>49.8</strong>
+                        <span class="origin">/<del>&yen;159</del></span>
+                    </p>
+                </div>
+            </div>
+            <div class="fl">
+                <div class="hosptal_1">
+                    <img src="images/1126.jpg"/>
+                    <p class="descText">【双II秒杀】中华老字号百花牌天然蜂蜜3瓶 纯净农家自产野生土蜜</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>49.8</strong>
+                        <span class="origin">/<del>&yen;159</del></span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="fl">
+                <div class="hosptal_1">
+                    <img src="images/1121.jpg"/>
+                    <p class="descText">【双II秒杀】中华老字号百花牌天然蜂蜜3瓶 纯净农家自产野生土蜜</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>49.8</strong>
+                        <span class="origin">/<del>&yen;159</del></span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="fl">
+                <div class="hosptal_1">
+                    <img src="images/1130.jpg"/>
+                    <p class="descText">【双II秒杀】中华老字号百花牌天然蜂蜜3瓶 纯净农家自产野生土蜜</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>49.8</strong>
+                        <span class="origin">/<del>&yen;159</del></span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="fl">
+                <div class="hosptal_1">
+                    <img src="images/1128.jpg"/>
+                    <p class="descText">【双II秒杀】中华老字号百花牌天然蜂蜜3瓶 纯净农家自产野生土蜜</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>49.8</strong>
+                        <span class="origin">/<del>&yen;159</del></span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="fl">
+                <div class="hosptal_1">
+                    <img src="images/1129.jpg"/>
+                    <p class="descText">【双II秒杀】中华老字号百花牌天然蜂蜜3瓶 纯净农家自产野生土蜜</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>49.8</strong>
+                        <span class="origin">/<del>&yen;159</del></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--品牌5-->
+    <div class="row">
+        <h2>滋补养生</h2>
+        <div class="fl pro_2">
+            <div class="fl">
+                <img src="images/1131.jpg"/>
+            </div>
+            <div class="fl">
+                <div class="hosptal_1">
+                    <img src="images/1132.jpg"/>
+                    <p class="descText">【买3送1】野生向天果 所罗门产 非印尼产 挑选大粒 105克瓶装</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>49.8</strong>
+                        <span class="origin">/<del>&yen;159</del></span>
+                    </p>
+                </div>
+            </div>
+            <div class="fl">
+                <div class="hosptal_1">
+                    <img src="images/1133.jpg"/>
+                    <p class="descText">【买3送1】野生向天果 所罗门产 非印尼产 挑选大粒 105克瓶装</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>49.8</strong>
+                        <span class="origin">/<del>&yen;159</del></span>
+                    </p>
+                </div>
+            </div>
+            <div class="fl">
+                <div class="hosptal_1">
+                    <img src="images/1134.jpg"/>
+                    <p class="descText">【买3送1】野生向天果 所罗门产 非印尼产 挑选大粒 105克瓶装</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>49.8</strong>
+                        <span class="origin">/<del>&yen;159</del></span>
+                    </p>
+                </div>
+            </div>
+            <div class="fl">
+                <div class="hosptal_1">
+                    <img src="images/1135.jpg"/>
+                    <p class="descText">【买3送1】野生向天果 所罗门产 非印尼产 挑选大粒 105克瓶装</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>49.8</strong>
+                        <span class="origin">/<del>&yen;159</del></span>
+                    </p>
+                </div>
+            </div>
+            <div class="fl">
+                <div class="hosptal_1">
+                    <img src="images/1136.jpg"/>
+                    <p class="descText">【买3送1】野生向天果 所罗门产 非印尼产 挑选大粒 105克瓶装</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>49.8</strong>
+                        <span class="origin">/<del>&yen;159</del></span>
+                    </p>
+                </div>
+            </div>
+            <div class="fl">
+                <div class="hosptal_1">
+                    <img src="images/1137.jpg"/>
+                    <p class="descText">【买3送1】野生向天果 所罗门产 非印尼产 挑选大粒 105克瓶装</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>49.8</strong>
+                        <span class="origin">/<del>&yen;159</del></span>
+                    </p>
+                </div>
+            </div>
+            <div class="fl">
+                <div class="hosptal_1">
+                    <img src="images/1605.png"/>
+                    <p class="descText">【买3送1】野生向天果 所罗门产 非印尼产 挑选大粒 105克瓶装</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>49.8</strong>
+                        <span class="origin">/<del>&yen;159</del></span>
+                    </p>
+                </div>
+            </div>
+            <div class="fl">
+                <div class="hosptal_1">
+                    <img src="images/1606.png"/>
+                    <p class="descText">【买3送1】野生向天果 所罗门产 非印尼产 挑选大粒 105克瓶装</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>49.8</strong>
+                        <span class="origin">/<del>&yen;159</del></span>
+                    </p>
+                </div>
+            </div>
+            <div class="fl">
+                <div class="hosptal_1">
+                    <img src="images/1607.png"/>
+                    <p class="descText">【买3送1】野生向天果 所罗门产 非印尼产 挑选大粒 105克瓶装</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>49.8</strong>
+                        <span class="origin">/<del>&yen;159</del></span>
+                    </p>
+                </div>
+            </div>
+            <div class="fl">
+                <div class="hosptal_1">
+                    <img src="images/1608.png"/>
+                    <p class="descText">【买3送1】野生向天果 所罗门产 非印尼产 挑选大粒 105克瓶装</p>
+                    <p class="descPrice">
+                        <strong><span>&yen;</span>49.8</strong>
+                        <span class="origin">/<del>&yen;159</del></span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class=" col-lg-offset-1 col-lg-11 img_middle">
+            <img src="images/reg.jpg"/>
+        </div>
+    </div>
+<div class="row bottom_com">
+    <div class="col-lg-offset-1 col-lg-11">
+        <div class="col-lg-3">
+            <h3>购物指南</h3>
+            <ul>
+                <li><a href="#">免费注册</a></li>
+                <li><a href="#">开通支付宝</a></li>
+                <li><a href="#">支付宝充值</a></li>
+            </ul>
+        </div>
+
+        <div class="col-lg-3">
+            <h3>天猫保障</h3>
+            <ul>
+                <li><a href="#">发票保障</a></li>
+                <li><a href="#">售后规则</a></li>
+                <li><a href="#">缺货赔付</a></li>
+            </ul>
+        </div>
+
+        <div class="col-lg-3">
+            <h3>支付方式</h3>
+            <ul>
+                <li><a href="#">快捷支付</a></li>
+                <li><a href="#">信用卡</a></li>
+                <li><a href="#">余额宝</a></li>
+                <li><a href="#">蚂蚁花呗</a></li>
+                <li><a href="#">货到付款</a></li>
+            </ul>
+        </div>
+
+        <div class="col-lg-3">
+            <h3>商家服务</h3>
+            <ul>
+                <li><a href="#">商家入驻</a></li>
+                <li><a href="#">商家中心</a></li>
+                <li><a href="#">天猫智库</a></li>
+                <li><a href="#">天猫规则</a></li>
+                <li><a href="#">物流服务</a></li>
+                <li><a href="#">喵言喵语</a></li>
+                <li><a href="#">运营服务</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-11 col-lg-offset-1">
+    <img src="images/下载.gif"/>
+</div>
+</div>
+</div>
+<!--底布 -->
+<footer>
+    <div class="footerAll">
+        <ul class="footer_1" >
+            <li><a href="#">关于天猫</a></li>
+            <li><a href="#">帮助中心</a></li>
+            <li><a href="#">开放平台</a></li>
+            <li><a href="#">诚聘英才</a></li>
+            <li><a href="#">联系我们</a></li>
+            <li><a href="#">网站合作</a></li>
+            <li><a href="#">法律声明</a></li>
+            <li><a href="#">廉正举报</a></li>
+        </ul>
+
+        <ul class="footer_2">
+            <li><a href="#">阿里巴巴集团</a>|</li>
+            <li><a href="#">淘宝网</a>|</li>
+            <li><a href="#">天猫</a>|</li>
+            <li><a href="#">聚划算</a>|</li>
+            <li><a href="#">全球速卖通</a>|</li>
+            <li><a href="#">阿里巴巴国际交易市场</a>|</li>
+            <li><a href="#">1688</a>|</li>
+            <li><a href="#">阿里妈妈</a>|</li>
+            <li><a href="#">阿里旅行·去啊</a>|</li>
+            <li><a href="#">阿里云计算</a>|</li>
+            <li><a href="#">YunOS</a>|</li>
+            <li><a href="#">阿里通信</a>|</li>
+            <li><a href="#">万网</a>|</li>
+            <li><a href="#">阿里巴巴国际交易市场</a>|</li>
+            <li><a href="#">1688</a>|</li>
+            <li><a href="#">阿里妈妈</a>|</li>
+        </ul>
+        <ul class="footer_3">
+            <li>增值电信业务经营许可证：<a href="#">浙B2-20110446</a></li>
+            <li>网络文化经营许可证：<a href="#">浙网文[2015]0295-065号</a></li>
+            <li><a href="#">互联网药品信息服务资质证书编号：浙-（经营性）-2012-0005</a></li>
+            <li><b>&copy; 2003-2015 TMALL.COM 版权所有</b></li>
+        </ul>
+    </div>
+</footer>
+<a href="#" id="topScroll" class="top">回到顶部</a>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/lunbo.js"></script>
+</body>
+</html>

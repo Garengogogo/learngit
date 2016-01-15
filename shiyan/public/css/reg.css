@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.myForm {
+    margin-top: 150px;
+}
+/*验证码*/
+.yz_label {
+    background-color: #222222;
+    color: #ffffff;
+    font-family: 'Verdana, Geneva, sans-serif';
+}
+.yz_label span {
+    /*margin-right: 66px;*/
+}
+/*用户名*/
+#userWarn,#pwdAgainWarn, #pwdWarn {
+    display: none;
+    color: red;
+}
+.img_middle {
+    cursor: pointer;
+    margin-top: 100px;
+}
+.bottom_com {
+
+}
+.bottom_com ul li {
+    list-style: none;
+}
+ footer {
+    background-color: #080808;
+}
+footer a, footer li {
+    color: #ffffff;
+}
+.footer_1 {
+    margin-top: 20px;
+}
+.footer_1 li {
+    display: inline-block;
+}
+.footer_2 li {
+    display: inline-block;
+    margin-left: 3px;
+}
+.footer_2 li a {
+ margin-right: 5px;
+}
+.footerAll {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.footer_3 {
+    margin-bottom: 40px;
+}
+.footer_3 li {
+    display: inline-block;
+}
+.footer_3 li  {
+    margin-right: 25px;
+}
+/*注册协议*/
+.regttp {
+    width: 960px;
+    height: 500px;
+    background: #ffffff;
+    opacity: 0.3;
+    position: absolute;
+    top: 50px;
+    left: 240px;
+    border: 2px solid #ac2925;
+}
+.error {
+    float: right;
+    font-size: 33px;
+    color: #F50021;
+}
