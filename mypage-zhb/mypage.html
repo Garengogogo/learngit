@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>MY HOME PAGE</title>
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet"/>-->
+    <!--<link href="css/normalize.css" rel="stylesheet"/>-->
+    <link href="css/mypage.css" rel="stylesheet"/>
+</head>
+<body>
+<header>
+    <nav>
+        <ul class="nav-ul">
+            <li class="that-year"><a href="#">那些年~</a></li>
+            <li>个人中心</li>
+            <li class="home" id="home-1">
+                <a href="#">我的主页&nbsp;&nbsp;</a><i></i>
+            <div class="home-1">
+                <ul>
+                    <li><a href="#">关于我们</a></li>
+                    <li>
+                        <a href="#">那年~高中</a>
+                    </li>
+                    <li class="us-university">
+                        <a href="#">那年~大一</a>
+                        <a href="#">那年~大二</a>
+                    </li>
+                    <li class="us-university">
+                        <a href="#">那年~大三</a>
+                        <a href="#">那年~大四</a>
+                    </li>
+                    <li class="us-university">
+                        <a href="#">那年~毕业</a>
+                        <a href="#">未来会是怎样？</a>
+                    </li>
+                </ul>
+            </div>
+            </li>
+            <li><a href="#">好友</a>&nbsp;&nbsp;<i></i></li>
+            <li><a href="#">应用</a>&nbsp;&nbsp;<i></i></li>
+            <li><a href="#">装扮</a></li>
+            <li class="miusic">
+                <a href="#">音乐</a>&nbsp;&nbsp;<i></i>
+                <div class="miusic-1">
+                    <audio controls="controls" autoplay="autoplay">
+                        <source src="song.mp3" type="audio/mpeg" />
+                    </audio>
+                </div>
+            </li>
+            <li><a href="#">视频区域</a>&nbsp;&nbsp;<i></i></li>
+        </ul>
+    </nav>
+</header>
+<div class="container">
+    <div class="banner">
+        <div class="slides">
+            <div class="slideInner">
+                <a class="item1" href="#">
+                </a>
+                <a class="item2" href="#">
+                </a>
+                <a class="item3" href="#" class="slide3">
+                </a>
+                <a class="item4" href="#" >
+                </a>
+                <a class="item5" href="#">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--轮播图结束-->
+    <!--视频区开始-->
+    <!-- 代码 begin -->
+    <!--<div  style="width:1000px; height:500px; margin:0 auto;position:relative;">-->
+        <!--<object  class id="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"-->
+                 <!--codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0"-->
+                 <!--width="1000" height="500"  id="myPlay" >-->
+            <!--<param name="movie" value="flvplayer.swf">-->
+            <!--<param name="quality" value="high">-->
+            <!--<param name="allowFullScreen" value="true">-->
+            <!--<param name="volume" value="50">-->
+            <!--<param name="bgColor" value="#ff6600" />-->
+            <!--<param name="repeat" value="true">-->
+            <!--<param name="FlashVars" value="vcastr_file=videofiles/tiancheng.mp4">-->
+            <!--<embed src="flvplayer.swf" allowfullscreen="true" autostart="true"-->
+                   <!--flashvars="vcastr_file=videofiles/tiancheng.mp4" quality="high"-->
+                   <!--pluginspage="http://www.macromedia.com/go/getflashplayer"-->
+                   <!--type="application/x-shockwave-flash" width="1000" height="500">-->
+            <!--</embed>-->
+        <!--</object>-->
+    <!--</div>-->
+    <!-- 代码 end -->
+</div>
+<footer>
+    <div class="footer-1">
+        <div class="footer-1-1">
+            <h3>合作伙伴</h3>
+            <ul>
+                <li><a href="#">lol-gailun</a></li>
+                <li><a href="#">lol-gailun</a></li>
+                <li><a href="#">lol-gailun</a></li>
+                <li><a href="#">lol-gailun</a></li>
+                <li><a href="#">lol-gailun</a></li>
+            </ul>
+        </div>
+        <div class="footer-1-1">
+            <h3>友情链接</h3>
+            <ul>
+                <li><a href="#">lol-gailun</a></li>
+                <li><a href="#">lol-gailun</a></li>
+                <li><a href="#">lol-gailun</a></li>
+                <li><a href="#">lol-gailun</a></li>
+                <li><a href="#">lol-gailun</a></li>
+            </ul>
+        </div>
+        <div class="footer-1-1">
+            <h3>更多资讯</h3>
+            <ul>
+                <li><a href="#">lol-gailun</a></li>
+                <li><a href="#">lol-gailun</a></li>
+                <li><a href="#">lol-gailun</a></li>
+                <li><a href="#">lol-gailun</a></li>
+                <li><a href="#">lol-gailun</a></li>
+            </ul>
+        </div>
+        <div class="adress">
+            <span>Copyright © 2015 xxxx.com,All Rights Reserved </span><br />
+            <span>zhengxiaocai 版权所有 &nbsp;蜀ICP备1501344808号</span>
+        </div>
+    </div>
+</footer>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/mypage.js"></script>
+<script src="js/slide.js"></script>
+<script>
+    //轮播
+    $(document).ready(function() {
+        $(".slideInner").slide({
+            slideContainer: $('.slideInner a'),
+            effect: 'easeOutCirc',
+            autoRunTime: 5000,
+            slideSpeed: 1000,
+            nav: true,
+            autoRun: true,
+            prevBtn: $('a.prev'),
+            nextBtn: $('a.next')
+        })
+    })
+</script>
+</body>
+</html>
