@@ -1,3 +1,5 @@
+QQ接受的文件：d:我的文档——tencent files 821709846 -filerecv
+
 html5:用于绘画的canvas;video、audio;article、footer、header、nav、section.
 表单控件：date、time、email、url、search、calendar;
 
@@ -462,11 +464,230 @@ alert(num);
 
 2016年1月29日
 
-JavaScript高级程序设计--138
+JavaScript高级程序设计
+
+////////////////面向对象程序设计///////////////////////////////////////////
+
+创建对象的最简单方式就是创建一个Object的实例，然后在为他添加属性和方法。
+
+
+//   工厂模式
+    function createPerson(name, age, job) {
+        var o = new  Object();
+        o.name = name;
+        o.age = age;
+        o.job = job;
+        o.sayname = function() {
+            alert(this.name);
+        };
+        return o;
+    }
+    var person1 = createPerson('zhb', 20, 'worker');
+    person1.sayname();
+</script>
+
+可以无数次的调用这个函数，每次返回包含三个属性一个方法的对象。工厂模式解决了创建多个相似对象的问题，但是没有解决对象识别的问题（即怎样知道一个对象的类
+型）。
+
+
+//   构造函数模式
+    function Person(name, age, job) {
+        this.name = name;
+        this.age = age;
+        this.job = job;
+        this.sayname = function() {
+            alert(this.name);
+        };
+    }
+    var person1 = new Person('zhb', 20, 'worker');
+    var  person2 = new Person('wll',10, 'Doctor');
+    person1.sayname();
+    /*函数名Person的首字母应大写，构造函数始终都应该以一个大写字母开头，而非构造函数则应该以
+    一个小写字母开头*/
+其中：
+this.name = sayname;
+function sayname() {
+	alert(this.name);
+}
+
+
+<script>
+//   原型模式
+    function Person() {
+
+    }
+Person.prototype.name = 'hello';
+Person.prototype.age = 29;
+Person.prototype.job = 'worker';
+Person.prototype.sayName = function() {
+    alert(this.name);
+};
+var person1 = new Person();
+person1.hasOwnProperty('name')  // false
+
+/*hasOwnProperty()
+* 方法可以检测一个属性是存在于实例中，还是存在于原型中。
+* 只有给定属性存在于对象实例中时，才会返回true。
+*
+* 原型与in操作符
+* 在单独使用in操作符时，会在通过对象能够访问给定属性时返回true，无论该属性存在于实例中还是
+* 在原型中。
+*alert('name' in person1);
+*
+* 要取得对象上所有可枚举的实例属性，可是使用Object.keys()方法，接受一个对象作为参数，返回
+* 一个包含所有可枚举属性的字符串数组。
+*
+* */
+var keys = Object.keys(Person.prototype);
+console.log(keys);//["name", "age", "job", "sayName"]
+var p1 = new Person();
+    p1.name = 'bob';
+    p1.age = 22;
+    var p1keys = Object.keys(p1);
+    console.log(p1keys);//["name", "age"]
+/*
+* 如果想要得到所有实例属性，无论是否可枚举，都可以使用Object。getOwnPropertyNames()方法
+* */
+    var keys = Object.getOwnPropertyNames(Person.prototype);
+    console.log(keys);//["constructor", "name", "age", "job", "sayName"]
+    
+////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////
+function Person () {
+
+}
+Person.prototype = {
+    name : "monday",
+    age : "23",
+    job : "banzhaung",
+    sayName : function() {
+        alert(this.name);
+    }
+};
+    /*
+    * 组合使用构造函数模式和原型模式。构造函数模式用于定义实例属性，原型模式用于定义方法和共享的属性
+    * 结果，每个实例都会有自己的一份实例属性的副本，但同时又共享着对方法的引用，最大限度的节省了内存。
+    * 还可以支持向构造函数传递参数。
+    * */
+
+    function Person(name, age, job) {
+        this.name = name;
+        this.age = age;
+        this.job = job;
+        this.friends = ['sheliby', 'court'];
+    }
+    Person.prototype =　{
+        constructor : Person,
+        sayName : function(){
+            alert(this.name);
+        }
+    }
+    var person1 = new Person('hello', 55, 'cnd');
+    var person2 = new Person('hai',22, 'come');
+    person1.friends.push('today');
+    alert(person1.friends);
+    alert(person2.friends);
+    alert(person1.friends === person2.friends );  //false
+    alert(person1.sayName === person2.sayName);    //true
+
+/*
+* 继承
+* 原型链——原型链是实现继承的主要方法。基本思想是：利用原型让一个引用类型继承另一个引用类型
+* 的属性和方法。
+* */
+    function SuperType() {
+        this.prototype = true;
+    }
+    SuperType.prototype.getSuperValue = function() {
+        return this.prototype;
+    };
+    function SubType() {
+        this.prototype = false;
+    }
+    //继承了SuperType
+    SubType.prototype = new SuperType();
+
+    SubType.prototype.getSubValue = function() {
+        return this.subproperty;
+    };
+    var instance = new SubType();
+    alert(instance.getSuperValue());
+
+    /*借用构造函数
+    *通过使用call（）方法或apply（）方法。
+    * */
+    function SuperType() {
+        this.colors = ["erd", "blue", "green"];
+    }
+    function SubType() {
+        //继承SuperType
+        SuperType.call(this);
+    }
+    var instance1 = new SubType();
+    instance1.colors.push("black");
+    alert(instance1.colors);
+    var instance2 = new SubType();
+    alert(instance2.colors);
+/*
+* 传递参数
+* 相对与原型链而言，借用构造函数有一个很大的优势，即可以在子类型构造函数中向超类型构造函数传递参数。
+*
+* */
+    function SuperType(name) {
+        this.name = name;
+    }
+    function SubType() {
+     //jichengk supertype,同时还传递了参数
+        SuperType.call(this, "zhengbiao");
+        this.age = 24;
+    }
+    var instance = new SubType();
+    alert(instance.name);
+    alert(instance.age);
+    /*
+    * 组合继承
+    * 有时候也叫伪经典继承，指的是讲原型链和借用构造函数的的技术组合在一起。
+    * */
+    function SuperType(name) {
+        this.name = name ;
+        this.colors = ["red", "blue","green"];
+    }
+    SuperType.prototype.sayName = function() {
+        alert(this.name);
+    };
+
+    function SubType(name ,age) {
+        //继承属性
+        SuperType.call(this, name);
+        this.age = age;
+    }
+    //继承方法
+    SubType.prototype = new SuperType();
+    SubType.prototype.sayAge = function() {
+        alert(this.age);
+    };
+    var instance1 = new SubType("zhenbiao",23);
+    instance1.colors.push("black");
+    alert(instance1.colors);
+    instance1.sayAge();
+    instance1.sayName();
+
+    var instance2 = new SubType("wulinglin", "22");
+    alert(instance2.colors);
+    instance2.sayAge();
+    instance2.sayName();
 
 
 
 
+    
+</script>
+
+2016年2月1日
+
+第六章看完。
+开始——193
 
 
 
